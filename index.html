@@ -16,10 +16,9 @@
       <div class="welcome-glow"></div>
       <div class="welcome-content">
         <span class="welcome-kicker">Welcome to</span>
-        <div class="welcome-name" aria-label="Velvet Soirée">
-          <span class="welcome-v">V</span>
+        <div class="welcome-name" aria-label="Velvet Soiree">
           <span class="welcome-word">Velvet</span>
-          <span class="welcome-word welcome-soiree">Soirée</span>
+          <span class="welcome-word welcome-soiree">Soir<span class="soiree-e">e</span>e</span>
         </div>
         <span class="welcome-line"></span>
         <span class="welcome-subtitle">A Feast for the Eyes and Soul</span>
@@ -28,14 +27,20 @@
 
     <nav class="site-nav">
       <div class="wrap nav-inner">
-        <a class="brand" href="#home" aria-label="Velvet Soirée">
+        <a class="brand" href="#home" aria-label="Velvet Soiree">
           <span class="brand-mark">V</span>
-          <span class="brand-text">Velvet Soirée</span>
+          <span class="brand-text">Velvet Soiree</span>
         </a>
 
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
           <a href="#about">About</a>
+          <a href="#chefs">Our Chefs</a>
           <a href="#services">Services</a>
+          <a href="#process">How It Works</a>
           <a href="#planning">Planning</a>
           <a href="#menus">Menus</a>
           <a href="#contact">Contact</a>
@@ -44,16 +49,35 @@
     </nav>
 
     <header class="hero" id="home">
-      <div class="wrap">
-        <div class="eyebrow">Established 2024 • Pretoria • Cape Town</div>
-        <h1>Catering for Every Occasion</h1>
-        <div class="tag">A Feast for the Eyes and Soul</div>
-        <p>
-          Catering, event planning and thoughtful hospitality tailored to your occasion —
-          from intimate gatherings to large celebrations.
-        </p>
-        <a class="btn" href="#contact">Get a Quote</a>
-        <a class="btn alt" href="#services">Our Services</a>
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">Established 2024 • Pretoria • Cape Town</div>
+          <h1>Catering for Every Occasion</h1>
+          <div class="tag">A Feast for the Eyes and Soul</div>
+          <p>Thoughtful catering and event planning, made for your occasion.</p>
+          <a class="btn" href="#contact">Get a Quote</a>
+          <a class="btn alt" href="#services">Our Services</a>
+        </div>
+
+        <div class="feather-accent" aria-hidden="true">
+          <img src="feather.png" alt="">
+        </div>
+
+        <div class="food-carousel" aria-label="Velvet Soirée food gallery">
+          <div class="food-slides">
+            <figure class="food-slide is-active" data-caption="Fresh, vibrant flavours"><img src="assets/chicken-salad.png" alt="Grilled chicken salad"></figure>
+            <figure class="food-slide" data-caption="Sweet finishing touches"><img src="assets/berry-cheesecake.png" alt="Berry cheesecake"></figure>
+            <figure class="food-slide" data-caption="Beautifully curated platters"><img src="assets/canape-platter.png" alt="Canapé platter"></figure>
+            <figure class="food-slide" data-caption="Made for sharing"><img src="assets/caprese-platter.png" alt="Tomato and mozzarella platter"></figure>
+          </div>
+          <div class="food-caption" aria-live="polite">Fresh, vibrant flavours</div>
+          <div class="food-dots" aria-label="Choose a food photo">
+            <button class="is-active" type="button" aria-label="Show grilled chicken salad" aria-pressed="true"></button>
+            <button type="button" aria-label="Show berry cheesecake" aria-pressed="false"></button>
+            <button type="button" aria-label="Show canapé platter" aria-pressed="false"></button>
+            <button type="button" aria-label="Show tomato and mozzarella platter" aria-pressed="false"></button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -63,16 +87,7 @@
           <div class="eyebrow">Established 2024 • About Velvet Soirée</div>
           <h2 class="section-title left-align">Food. Presentation. Experience.</h2>
           <div class="goldline"></div>
-          <p>
-            Velvet Soirée is a catering and event planning brand based in Pretoria and Cape Town,
-            created to bring together exceptional food, elegant presentation, thoughtful planning and
-            memorable experiences.
-          </p>
-          <p>
-            We provide flexible catering solutions for private gatherings, corporate functions,
-            celebrations, day outings and larger occasions. Each service is shaped around the event,
-            guest count, preferences and overall experience our client wants to create.
-          </p>
+          <p>Velvet Soirée brings food, planning and presentation together for occasions in Pretoria and Cape Town.</p>
         </div>
 
         <div class="quote">
@@ -81,28 +96,59 @@
       </div>
     </section>
 
-    <section id="services" style="background: #111;">
+    <section id="chefs" class="chefs-section">
+      <div class="wrap">
+        <div class="chefs-intro">
+          <div class="eyebrow">The people behind the plate</div>
+          <h2 class="section-title left-align">Meet Our Chefs</h2>
+          <p>The team behind every Velvet Soirée experience.</p>
+        </div>
+        <div class="chefs-grid">
+          <article class="chef-card">
+            <div class="chef-image"><img src="assets/chef-black.jpeg" alt="Velvet Soirée chef in a black chef jacket"></div>
+            <div class="chef-copy"><span>Velvet Soirée</span><h3>Our culinary team</h3></div>
+          </article>
+          <article class="chef-card">
+            <div class="chef-image"><img src="assets/chef-white.jpeg" alt="Velvet Soirée chef in a white chef jacket"></div>
+            <div class="chef-copy"><span>Our kitchen</span><h3>Made with care</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
       <div class="wrap">
         <div class="eyebrow centered">What We Do</div>
         <h2 class="section-title">Catering &amp; Event Planning</h2>
         <p class="section-lead">
-          From the first idea to the final plate, Velvet Soirée brings food, styling,
-          coordination and hospitality together to create memorable occasions.
+          Choose a service below to see how we can shape it around your occasion.
         </p>
 
         <div class="grid">
-          <div class="card"><h3>Event Planning</h3><p>Planning and coordination for celebrations, private functions, corporate events and special occasions.</p></div>
-          <div class="card"><h3>Event Coordination</h3><p>On-the-day coordination to help keep suppliers, timelines and the overall experience running smoothly.</p></div>
-          <div class="card"><h3>Private Events</h3><p>Birthdays, anniversaries, intimate dinners, family gatherings and private celebrations.</p></div>
-          <div class="card"><h3>Corporate Events</h3><p>Meetings, conferences, launches, staff functions, year-end events and professional gatherings.</p></div>
-          <div class="card"><h3>Weddings &amp; Celebrations</h3><p>Thoughtful catering and event support for weddings, engagements, graduations, showers and milestone occasions.</p></div>
-          <div class="card"><h3>Day Outings &amp; Experiences</h3><p>Catering and event support for picnics, outdoor experiences, group outings and curated day experiences.</p></div>
-          <div class="card"><h3>Platters &amp; Finger Foods</h3><p>Beautifully presented platters, canapés, snacks and finger foods for meetings, receptions and gatherings.</p></div>
-          <div class="card"><h3>Private Chef Experiences</h3><p>Personalised chef services for private dinners, intimate occasions and elevated dining experiences.</p></div>
-          <div class="card"><h3>Large Events &amp; Functions</h3><p>Scalable catering and event support for larger guest numbers, with solutions tailored to the occasion.</p></div>
-          <div class="card"><h3>Event Styling &amp; Setup</h3><p>Elegant setup and presentation support to help bring the look and atmosphere of your event together.</p></div>
-          <div class="card"><h3>Custom Packages</h3><p>We can combine catering, planning, coordination and event support around your needs and budget.</p></div>
-          <div class="card"><h3>Event Partnerships</h3><p>Reliable catering and event support for planners, businesses, venues and experience providers.</p></div>
+          <div class="card"><h3>Event Planning</h3><p>Your event, mapped out.</p></div>
+          <div class="card"><h3>Event Coordination</h3><p>Easy on-the-day flow.</p></div>
+          <div class="card"><h3>Private Events</h3><p>Celebrations of every size.</p></div>
+          <div class="card"><h3>Corporate Events</h3><p>Meetings, launches and team events.</p></div>
+          <div class="card"><h3>Weddings &amp; Celebrations</h3><p>Food for life’s milestones.</p></div>
+          <div class="card"><h3>Day Outings &amp; Experiences</h3><p>Food for days worth remembering.</p></div>
+          <div class="card"><h3>Platters &amp; Finger Foods</h3><p>Easy sharing, beautifully served.</p></div>
+          <div class="card"><h3>Private Chef Experiences</h3><p>Dining, made personal.</p></div>
+          <div class="card"><h3>Large Events &amp; Functions</h3><p>Catering that scales.</p></div>
+          <div class="card"><h3>Event Styling &amp; Setup</h3><p>The finishing visual touches.</p></div>
+          <div class="card"><h3>Custom Packages</h3><p>Built around you.</p></div>
+          <div class="card"><h3>Event Partnerships</h3><p>Reliable support for your clients.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process-section">
+      <div class="wrap">
+        <div class="eyebrow centered">Simple from start to finish</div>
+        <h2 class="section-title">How It Works</h2>
+        <div class="process-steps">
+          <div><span>01</span><h3>Tell us your vision</h3><p>Share the essentials.</p></div>
+          <div><span>02</span><h3>Receive your proposal</h3><p>We tailor the details.</p></div>
+          <div><span>03</span><h3>Enjoy the occasion</h3><p>We take care of the rest.</p></div>
         </div>
       </div>
     </section>
@@ -111,18 +157,16 @@
       <div class="wrap">
         <div class="eyebrow centered">Beyond Catering</div>
         <h2 class="section-title">We Plan the Experience</h2>
-        <p class="section-lead">
-          Velvet Soirée can assist with the details that turn an event from a gathering into an experience.
-        </p>
+        <p class="section-lead">The details, taken care of.</p>
 
         <div class="grid">
-          <div class="card"><h3>Concept &amp; Planning</h3><p>We help shape the event concept, requirements, guest experience and overall direction.</p></div>
-          <div class="card"><h3>Supplier Coordination</h3><p>Where required, we can help coordinate the moving parts that support the event.</p></div>
-          <div class="card"><h3>Food &amp; Hospitality</h3><p>Catering, service flow and hospitality are planned as part of the wider event experience.</p></div>
-          <div class="card"><h3>Setup &amp; Styling</h3><p>We can assist with presentation, tablescapes and the visual details that complete the occasion.</p></div>
+          <div class="card"><h3>Concept &amp; Planning</h3><p>A clear event direction.</p></div>
+          <div class="card"><h3>Supplier Coordination</h3><p>The moving parts, managed.</p></div>
+          <div class="card"><h3>Food &amp; Hospitality</h3><p>Service that feels seamless.</p></div>
+          <div class="card"><h3>Setup &amp; Styling</h3><p>A considered finishing touch.</p></div>
         </div>
 
-        <div class="cta" style="margin-top: 40px;">
+        <div class="cta cta-planning">
           <a class="btn" href="#contact">Plan Your Event With Us</a>
         </div>
       </div>
@@ -130,24 +174,34 @@
 
     <section id="menus" class="band">
       <div class="wrap">
-        <div class="eyebrow centered" style="color: #8b6d2d;">Menus &amp; Packages</div>
+        <div class="eyebrow eyebrow-dark centered">Menus &amp; Packages</div>
         <h2 class="section-title">Made Around Your Event</h2>
-        <p class="section-lead">
-          We keep our pricing flexible rather than one-size-fits-all. Packages are tailored to guest
-          numbers, menu choices, service requirements and event style.
-        </p>
+        <p class="section-lead">Choose what suits your table.</p>
 
         <div class="menu">
-          <div><h3>Breakfast &amp; Brunch</h3><p>Fresh, relaxed catering for mornings and daytime gatherings.</p></div>
-          <div><h3>Lunch &amp; Dinner</h3><p>Complete meal options for private and professional occasions.</p></div>
-          <div><h3>Canapés &amp; Finger Foods</h3><p>Easy-to-serve selections for receptions and social events.</p></div>
-          <div><h3>Platters</h3><p>Curated sharing options for meetings, gatherings and celebrations.</p></div>
-          <div><h3>Braai &amp; Grill</h3><p>Social, generous catering for outdoor and celebration settings.</p></div>
-          <div><h3>Desserts &amp; Beverages</h3><p>Finishing touches to complement your catering experience.</p></div>
+          <div><h3>Breakfast &amp; Brunch</h3></div>
+          <div><h3>Lunch &amp; Dinner</h3></div>
+          <div><h3>Canapés &amp; Finger Foods</h3></div>
+          <div><h3>Platters</h3></div>
+          <div><h3>Braai &amp; Grill</h3></div>
+          <div><h3>Desserts &amp; Beverages</h3></div>
         </div>
 
-        <div class="centered" style="margin-top: 35px;">
+        <div class="centered menu-cta">
           <a class="btn" href="#contact">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <div class="wrap">
+        <div class="eyebrow centered">From our table</div>
+        <h2 class="section-title">A Taste of Velvet</h2>
+        <div class="food-grid">
+          <figure><img src="assets/gallery-platter.jpeg" alt="A colourful sharing platter" loading="lazy"></figure>
+          <figure><img src="assets/gallery-desserts.jpeg" alt="A tiered dessert and grazing table" loading="lazy"></figure>
+          <figure><img src="assets/gallery-aubergine.jpeg" alt="Baked aubergine dish" loading="lazy"></figure>
+          <figure><img src="assets/gallery-spread.jpeg" alt="A fruit and grazing table" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -156,10 +210,7 @@
       <div class="wrap cta">
         <div class="eyebrow">For Event Planners &amp; Businesses</div>
         <h2 class="section-title">Partner With Velvet</h2>
-        <p>
-          We work with event planners, coordinators, businesses and experience providers looking for
-          a catering partner they can rely on for their clients and events.
-        </p>
+        <p>A trusted catering partner for planners, venues and businesses.</p>
         <a class="btn" href="#contact">Discuss a Partnership</a>
       </div>
     </section>
@@ -169,28 +220,44 @@
         <div>
           <div class="eyebrow">Let's Create Something Delicious</div>
           <h2 class="section-title left-align">Get in Touch</h2>
-          <p>
-            Planning an event? Tell us what you have in mind and we'll get back to you with a tailored
-            catering proposal.
-          </p>
+          <p>Tell us about your event. We’ll create a tailored quote.</p>
           <p>
             <a class="btn" href="https://wa.me/27752202466" target="_blank" rel="noopener">WhatsApp Velvet</a>
           </p>
 
           <div class="contact-list">
-            <div><strong>Locations</strong><br>Pretoria • Cape Town</div>
-            <div><strong>Cape Town Contact</strong><br><a href="tel:+27752202466">+27 75 220 2466</a></div>
-            <div><strong>Pretoria Contact</strong><br><a href="tel:+27815324076">+27 81 532 4076</a></div>
-            <div><strong>Email</strong><br><a href="mailto:velvetsoiree25@gmail.com">velvetsoiree25@gmail.com</a></div>
-            <div><strong>Instagram</strong><br><a href="https://www.instagram.com/velvet_.soiree/" target="_blank" rel="noopener">@Velvet_.soiree</a></div>
+            <div class="phone-contact">
+              <strong>Cape Town</strong>
+              <a href="tel:+27752202466" aria-label="Call Velvet Soirée Cape Town">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 4.5h3l1.5 4-2 1.5a14 14 0 0 0 6 6l1.5-2 4 1.5v3A1.5 1.5 0 0 1 18 20C10.3 19.5 4.5 13.7 4 6A1.5 1.5 0 0 1 5.5 4.5Z"></path></svg>
+                <span>+27 75 220 2466</span>
+              </a>
+            </div>
+            <div class="phone-contact">
+              <strong>Pretoria</strong>
+              <a href="tel:+27815324076" aria-label="Call Velvet Soirée Pretoria">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 4.5h3l1.5 4-2 1.5a14 14 0 0 0 6 6l1.5-2 4 1.5v3A1.5 1.5 0 0 1 18 20C10.3 19.5 4.5 13.7 4 6A1.5 1.5 0 0 1 5.5 4.5Z"></path></svg>
+                <span>+27 81 532 4076</span>
+              </a>
+            </div>
+            <div class="contact-socials">
+              <a class="social-link" href="https://www.instagram.com/velvet_.soiree/" target="_blank" rel="noopener" aria-label="Follow Velvet Soirée on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="instagram-dot" cx="17.3" cy="6.8" r="1"></circle></svg>
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a class="social-link" href="mailto:velvetsoiree25@gmail.com" aria-label="Email Velvet Soirée on Gmail">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5 12 13l9-6.5"></path><path d="M3 6.5v11h18v-11"></path></svg>
+                <span class="sr-only">Gmail</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <form id="contact-form">
-          <input placeholder="Name" required>
-          <input placeholder="Phone / WhatsApp" required>
-          <input type="email" placeholder="Email" required>
-          <select required>
+          <input name="name" placeholder="Name" required>
+          <input name="phone" placeholder="Phone / WhatsApp" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <select name="eventType" required>
             <option value="">Event Type</option>
             <option>Private Event</option>
             <option>Corporate Event</option>
@@ -201,10 +268,18 @@
             <option>Large Event</option>
             <option>Other</option>
           </select>
-          <input placeholder="Event Date">
-          <input placeholder="Location">
-          <input placeholder="Number of Guests">
-          <textarea class="full" placeholder="Tell us about your catering requirements"></textarea>
+          <input name="eventDate" type="date" aria-label="Event date">
+          <input name="location" placeholder="Location">
+          <select name="guestCount" aria-label="Number of guests" required>
+            <option value="">Number of Guests</option>
+            <option>Less than 10</option>
+            <option>10+</option>
+            <option>20+</option>
+            <option>50+</option>
+            <option>100+</option>
+          </select>
+          <input id="service-interest" name="serviceInterest" type="hidden">
+          <textarea name="requirements" class="full" placeholder="Tell us about your catering requirements"></textarea>
           <button class="btn full" type="submit">Request a Quote</button>
         </form>
       </div>
@@ -213,7 +288,6 @@
     <footer>
       <div class="wrap footer">
         <div>© <span id="year">2024</span> Velvet Soirée. All rights reserved.</div>
-        <div>A Feast for the Eyes and Soul.</div>
       </div>
     </footer>
 
